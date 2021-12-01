@@ -40,6 +40,7 @@ requireDir("./src/models");
 app.use("/api", require("./src/routes"));
 
 //define your port number here
-app.listen(process.env.PORT || 5000, function () {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
   console.log("Now listening for request on port: " + PORT);
 });
